@@ -1,0 +1,13 @@
+<% include partials/_header-boilerplate %>
+
+<h1>Camps</h1>
+
+<ul>
+  <% camps.forEach(function(camp) { %>
+    <li>
+      <%= camp.name %>
+    </li>
+  <% }); %>
+</ul>
+
+<% include partials/_footer-boilerplate %>
