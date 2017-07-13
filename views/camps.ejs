@@ -1,13 +1,26 @@
 <% include partials/_header-boilerplate %>
 
-<h1>Camps</h1>
+<div class="container">
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Welcome to the Yelp Camp</h1>
+      <p>Here you have access to a list of camps around the world</p>
+      <p><a class="btn btn-primary" href="/camps/new">Create a new camp</a></p>
+    </div>
+  </header>
 
-<ul>
-  <% camps.forEach(function(camp) { %>
-    <li>
-      <%= camp.name %>
-    </li>
-  <% }); %>
-</ul>
-
+  <div class="row text-center">
+    <% camps.forEach(function(camp) { %>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+          <img src="<%= camp.image %>" alt="">
+          <div class="caption">
+            <h4><%= camp.name %></h4>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </ul>
+  </div>
+</div>
 <% include partials/_footer-boilerplate %>
